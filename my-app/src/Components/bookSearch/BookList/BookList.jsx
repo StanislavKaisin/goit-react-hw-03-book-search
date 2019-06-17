@@ -8,8 +8,9 @@ import styles from './BookListItem.module.css';
 const BookList = ({ searchResults }) => {
   return (
     <div className={styles.grid}>
-      {searchResults.length &&
-        searchResults.map(book => <BookListItem key={book.id} book={book} />)}
+      {searchResults.length
+        ? searchResults.map(book => <BookListItem key={book.id} book={book} />)
+        : null}
     </div>
   );
 };
